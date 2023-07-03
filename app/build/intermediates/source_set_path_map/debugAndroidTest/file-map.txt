@@ -1,0 +1,35 @@
+uz.gita.starterprojectmvi.test.app-runtime-1.4.3-0 C:\Users\TUF\.gradle\caches\transforms-3\0aa7abd7d34c2c4ced45261ebea7ec05\transformed\runtime-1.4.3\res
+uz.gita.starterprojectmvi.test.app-lifecycle-runtime-ktx-2.6.1-1 C:\Users\TUF\.gradle\caches\transforms-3\10aa0b7f898b3063ff22d09e17b15bee\transformed\lifecycle-runtime-ktx-2.6.1\res
+uz.gita.starterprojectmvi.test.app-core-1.5.0-2 C:\Users\TUF\.gradle\caches\transforms-3\1a2094e6d40c62b936c0736757960fdb\transformed\core-1.5.0\res
+uz.gita.starterprojectmvi.test.app-ui-test-1.4.3-3 C:\Users\TUF\.gradle\caches\transforms-3\1d06e4870484d2d26ace598dfff46dba\transformed\ui-test-1.4.3\res
+uz.gita.starterprojectmvi.test.app-lifecycle-viewmodel-ktx-2.6.1-4 C:\Users\TUF\.gradle\caches\transforms-3\1dbee3ef9a7b2e3414b85718e035e469\transformed\lifecycle-viewmodel-ktx-2.6.1\res
+uz.gita.starterprojectmvi.test.app-annotation-experimental-1.3.0-5 C:\Users\TUF\.gradle\caches\transforms-3\29a26f3279af31858bba866b71da37a7\transformed\annotation-experimental-1.3.0\res
+uz.gita.starterprojectmvi.test.app-startup-runtime-1.1.1-6 C:\Users\TUF\.gradle\caches\transforms-3\404b97c2053f0b0f992c9a2befc81a7d\transformed\startup-runtime-1.1.1\res
+uz.gita.starterprojectmvi.test.app-savedstate-ktx-1.2.1-7 C:\Users\TUF\.gradle\caches\transforms-3\46124dd42217333c77c925256c912ea1\transformed\savedstate-ktx-1.2.1\res
+uz.gita.starterprojectmvi.test.app-core-1.10.1-8 C:\Users\TUF\.gradle\caches\transforms-3\615fba833865198bbacb8dfc613d7072\transformed\core-1.10.1\res
+uz.gita.starterprojectmvi.test.app-lifecycle-process-2.6.1-9 C:\Users\TUF\.gradle\caches\transforms-3\62fd8e37585d043cb4206e56b1c99bcf\transformed\lifecycle-process-2.6.1\res
+uz.gita.starterprojectmvi.test.app-core-runtime-2.2.0-10 C:\Users\TUF\.gradle\caches\transforms-3\7d46a716d655f3ed21f06d5dcc1fbe4d\transformed\core-runtime-2.2.0\res
+uz.gita.starterprojectmvi.test.app-savedstate-1.2.1-11 C:\Users\TUF\.gradle\caches\transforms-3\80d10e268b68f0d6fff94d022cbfaa91\transformed\savedstate-1.2.1\res
+uz.gita.starterprojectmvi.test.app-customview-poolingcontainer-1.0.0-12 C:\Users\TUF\.gradle\caches\transforms-3\8924cea3d526f2930e590d234cd88371\transformed\customview-poolingcontainer-1.0.0\res
+uz.gita.starterprojectmvi.test.app-activity-compose-1.7.2-13 C:\Users\TUF\.gradle\caches\transforms-3\8cfcf0f350524be9fef9b7c17452ae4a\transformed\activity-compose-1.7.2\res
+uz.gita.starterprojectmvi.test.app-emoji2-1.3.0-14 C:\Users\TUF\.gradle\caches\transforms-3\8e5f89883acfac81f22d4afcce995900\transformed\emoji2-1.3.0\res
+uz.gita.starterprojectmvi.test.app-ui-graphics-1.4.3-15 C:\Users\TUF\.gradle\caches\transforms-3\919fc03e2fcbc32ba426506cc41f30d7\transformed\ui-graphics-1.4.3\res
+uz.gita.starterprojectmvi.test.app-ui-unit-1.4.3-16 C:\Users\TUF\.gradle\caches\transforms-3\92b1c21eb85665557eeaef8c36488dba\transformed\ui-unit-1.4.3\res
+uz.gita.starterprojectmvi.test.app-lifecycle-runtime-2.6.1-17 C:\Users\TUF\.gradle\caches\transforms-3\96adef00b048454e976d348494cfc2bd\transformed\lifecycle-runtime-2.6.1\res
+uz.gita.starterprojectmvi.test.app-ui-geometry-1.4.3-18 C:\Users\TUF\.gradle\caches\transforms-3\a12103c2fff0bd6c53b4058e8d1ac4b1\transformed\ui-geometry-1.4.3\res
+uz.gita.starterprojectmvi.test.app-runtime-saveable-1.4.3-19 C:\Users\TUF\.gradle\caches\transforms-3\a46d72395eee957ebe78a88fc4c6700d\transformed\runtime-saveable-1.4.3\res
+uz.gita.starterprojectmvi.test.app-lifecycle-viewmodel-savedstate-2.6.1-20 C:\Users\TUF\.gradle\caches\transforms-3\a8c1aa3f747be2671e6a51381c348cf6\transformed\lifecycle-viewmodel-savedstate-2.6.1\res
+uz.gita.starterprojectmvi.test.app-ui-util-1.4.3-21 C:\Users\TUF\.gradle\caches\transforms-3\bf82b54006015576462351ed5e90a963\transformed\ui-util-1.4.3\res
+uz.gita.starterprojectmvi.test.app-profileinstaller-1.3.1-22 C:\Users\TUF\.gradle\caches\transforms-3\c9e377e4cbe2f7b03be29e1faeb35bff\transformed\profileinstaller-1.3.1\res
+uz.gita.starterprojectmvi.test.app-lifecycle-viewmodel-2.6.1-23 C:\Users\TUF\.gradle\caches\transforms-3\cc77da4618f1857f0f5a4579d0e5bc21\transformed\lifecycle-viewmodel-2.6.1\res
+uz.gita.starterprojectmvi.test.app-core-ktx-1.10.1-24 C:\Users\TUF\.gradle\caches\transforms-3\cd8433cb9997162a54dfc993be33bd25\transformed\core-ktx-1.10.1\res
+uz.gita.starterprojectmvi.test.app-ui-text-1.4.3-25 C:\Users\TUF\.gradle\caches\transforms-3\cfd02b60fc96200f21f1cc34e9b7011d\transformed\ui-text-1.4.3\res
+uz.gita.starterprojectmvi.test.app-ui-test-junit4-1.4.3-26 C:\Users\TUF\.gradle\caches\transforms-3\d5b328eeeb7bdc4f60334bbfbd1b1d63\transformed\ui-test-junit4-1.4.3\res
+uz.gita.starterprojectmvi.test.app-ui-1.4.3-27 C:\Users\TUF\.gradle\caches\transforms-3\d7619efc68a3bf182ba3fe692dd4a2e6\transformed\ui-1.4.3\res
+uz.gita.starterprojectmvi.test.app-activity-ktx-1.7.2-28 C:\Users\TUF\.gradle\caches\transforms-3\e34e17ddb7b7fcdd322bc07d076a6219\transformed\activity-ktx-1.7.2\res
+uz.gita.starterprojectmvi.test.app-lifecycle-livedata-core-2.6.1-29 C:\Users\TUF\.gradle\caches\transforms-3\e3a46567d533c52c1a30797b0ae28ea9\transformed\lifecycle-livedata-core-2.6.1\res
+uz.gita.starterprojectmvi.test.app-activity-1.7.2-30 C:\Users\TUF\.gradle\caches\transforms-3\e8ce10af172a95f0f30a0dfe11184ada\transformed\activity-1.7.2\res
+uz.gita.starterprojectmvi.test.app-androidTest-31 C:\Users\TUF\Desktop\Android projects\StarterProjectMVI\app\build\generated\res\resValues\androidTest\debug
+uz.gita.starterprojectmvi.test.app-mergeDebugAndroidTestResources-32 C:\Users\TUF\Desktop\Android projects\StarterProjectMVI\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+uz.gita.starterprojectmvi.test.app-mergeDebugAndroidTestResources-33 C:\Users\TUF\Desktop\Android projects\StarterProjectMVI\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+uz.gita.starterprojectmvi.test.app-merged_res-34 C:\Users\TUF\Desktop\Android projects\StarterProjectMVI\app\build\intermediates\merged_res\debugAndroidTest
