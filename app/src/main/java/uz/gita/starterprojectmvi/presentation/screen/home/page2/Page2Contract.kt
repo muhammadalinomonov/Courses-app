@@ -15,6 +15,7 @@ interface Page2Contract {
     }
     sealed interface Intent{
         object LogOut:Intent
+        object OpenPayments:Intent
         object OpenMyCoursesScreen:Intent
     }
 }

@@ -132,7 +132,7 @@ class Page2Tab : Tab {
                     .padding(top = 16.dp)
                     .border(1.dp, Color.Gray, RoundedCornerShape(16.dp))
                     .clickable {
-//                    eventDispatcher.invoke(Page2Contract.Intent.OpenPaymentScreen)
+                        eventDispatcher.invoke(Page2Contract.Intent.OpenPayments)
                     }) {
                     Text(
                         text = "Payment",

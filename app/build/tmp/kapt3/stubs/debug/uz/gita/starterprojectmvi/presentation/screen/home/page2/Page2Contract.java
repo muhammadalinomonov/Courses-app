@@ -84,7 +84,7 @@ public abstract interface Page2Contract {
         }
     }
     
-    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\bv\u0018\u00002\u00020\u0001:\u0002\u0002\u0003\u0082\u0001\u0002\u0004\u0005\u00a8\u0006\u0006"}, d2 = {"Luz/gita/starterprojectmvi/presentation/screen/home/page2/Page2Contract$Intent;", "", "LogOut", "OpenMyCoursesScreen", "Luz/gita/starterprojectmvi/presentation/screen/home/page2/Page2Contract$Intent$LogOut;", "Luz/gita/starterprojectmvi/presentation/screen/home/page2/Page2Contract$Intent$OpenMyCoursesScreen;", "app_debug"})
+    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\bv\u0018\u00002\u00020\u0001:\u0003\u0002\u0003\u0004\u0082\u0001\u0003\u0005\u0006\u0007\u00a8\u0006\b"}, d2 = {"Luz/gita/starterprojectmvi/presentation/screen/home/page2/Page2Contract$Intent;", "", "LogOut", "OpenMyCoursesScreen", "OpenPayments", "Luz/gita/starterprojectmvi/presentation/screen/home/page2/Page2Contract$Intent$LogOut;", "Luz/gita/starterprojectmvi/presentation/screen/home/page2/Page2Contract$Intent$OpenMyCoursesScreen;", "Luz/gita/starterprojectmvi/presentation/screen/home/page2/Page2Contract$Intent$OpenPayments;", "app_debug"})
     public static abstract interface Intent {
         
         @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Luz/gita/starterprojectmvi/presentation/screen/home/page2/Page2Contract$Intent$LogOut;", "Luz/gita/starterprojectmvi/presentation/screen/home/page2/Page2Contract$Intent;", "()V", "app_debug"})
@@ -93,6 +93,16 @@ public abstract interface Page2Contract {
             public static final uz.gita.starterprojectmvi.presentation.screen.home.page2.Page2Contract.Intent.LogOut INSTANCE = null;
             
             private LogOut() {
+                super();
+            }
+        }
+        
+        @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Luz/gita/starterprojectmvi/presentation/screen/home/page2/Page2Contract$Intent$OpenPayments;", "Luz/gita/starterprojectmvi/presentation/screen/home/page2/Page2Contract$Intent;", "()V", "app_debug"})
+        public static final class OpenPayments implements uz.gita.starterprojectmvi.presentation.screen.home.page2.Page2Contract.Intent {
+            @org.jetbrains.annotations.NotNull
+            public static final uz.gita.starterprojectmvi.presentation.screen.home.page2.Page2Contract.Intent.OpenPayments INSTANCE = null;
+            
+            private OpenPayments() {
                 super();
             }
         }

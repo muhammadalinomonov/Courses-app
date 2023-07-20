@@ -72,6 +72,9 @@ import uz.gita.starterprojectmvi.presentation.screen.home.page3.Page3ViewModel_H
 import uz.gita.starterprojectmvi.presentation.screen.intro.IntroDirections;
 import uz.gita.starterprojectmvi.presentation.screen.intro.IntroViewModel;
 import uz.gita.starterprojectmvi.presentation.screen.intro.IntroViewModel_HiltModules_KeyModule_ProvideFactory;
+import uz.gita.starterprojectmvi.presentation.screen.payment.PaymentDirectionImpl;
+import uz.gita.starterprojectmvi.presentation.screen.payment.PaymentModel;
+import uz.gita.starterprojectmvi.presentation.screen.payment.PaymentModel_HiltModules_KeyModule_ProvideFactory;
 import uz.gita.starterprojectmvi.presentation.screen.search.SearchDirectionsImpl;
 import uz.gita.starterprojectmvi.presentation.screen.search.SearchViewModel;
 import uz.gita.starterprojectmvi.presentation.screen.search.SearchViewModel_HiltModules_KeyModule_ProvideFactory;
@@ -439,7 +442,7 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     @Override
     public Set<String> getViewModelKeys() {
-      return ImmutableSet.<String>of(DetailsViewModel_HiltModules_KeyModule_ProvideFactory.provide(), HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide(), IntroViewModel_HiltModules_KeyModule_ProvideFactory.provide(), LoginModel_HiltModules_KeyModule_ProvideFactory.provide(), Page1ViewModel_HiltModules_KeyModule_ProvideFactory.provide(), Page2ViewModel_HiltModules_KeyModule_ProvideFactory.provide(), Page3ViewModel_HiltModules_KeyModule_ProvideFactory.provide(), RegisterModel_HiltModules_KeyModule_ProvideFactory.provide(), SearchViewModel_HiltModules_KeyModule_ProvideFactory.provide(), SplashViewModel_HiltModules_KeyModule_ProvideFactory.provide(), YourCoursesViewModel_HiltModules_KeyModule_ProvideFactory.provide());
+      return ImmutableSet.<String>of(DetailsViewModel_HiltModules_KeyModule_ProvideFactory.provide(), HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide(), IntroViewModel_HiltModules_KeyModule_ProvideFactory.provide(), LoginModel_HiltModules_KeyModule_ProvideFactory.provide(), Page1ViewModel_HiltModules_KeyModule_ProvideFactory.provide(), Page2ViewModel_HiltModules_KeyModule_ProvideFactory.provide(), Page3ViewModel_HiltModules_KeyModule_ProvideFactory.provide(), PaymentModel_HiltModules_KeyModule_ProvideFactory.provide(), RegisterModel_HiltModules_KeyModule_ProvideFactory.provide(), SearchViewModel_HiltModules_KeyModule_ProvideFactory.provide(), SplashViewModel_HiltModules_KeyModule_ProvideFactory.provide(), YourCoursesViewModel_HiltModules_KeyModule_ProvideFactory.provide());
     }
 
     @Override
@@ -490,6 +493,8 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     private Provider<Page3ViewModel> page3ViewModelProvider;
 
+    private Provider<PaymentModel> paymentModelProvider;
+
     private Provider<RegisterModel> registerModelProvider;
 
     private Provider<SearchViewModel> searchViewModelProvider;
@@ -536,6 +541,10 @@ public final class DaggerApp_HiltComponents_SingletonC {
       return new Page3DirectionImpl(singletonCImpl.navigationDispatcherProvider.get());
     }
 
+    private PaymentDirectionImpl paymentDirectionImpl() {
+      return new PaymentDirectionImpl(singletonCImpl.navigationDispatcherProvider.get());
+    }
+
     private RegisterDirectionImpl registerDirectionImpl() {
       return new RegisterDirectionImpl(singletonCImpl.navigationDispatcherProvider.get());
     }
@@ -562,15 +571,16 @@ public final class DaggerApp_HiltComponents_SingletonC {
       this.page1ViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 4);
       this.page2ViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 5);
       this.page3ViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 6);
-      this.registerModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 7);
-      this.searchViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 8);
-      this.splashViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 9);
-      this.yourCoursesViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 10);
+      this.paymentModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 7);
+      this.registerModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 8);
+      this.searchViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 9);
+      this.splashViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 10);
+      this.yourCoursesViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 11);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return ImmutableMap.<String, Provider<ViewModel>>builderWithExpectedSize(11).put("uz.gita.starterprojectmvi.presentation.screen.details.DetailsViewModel", ((Provider) detailsViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.home.HomeViewModel", ((Provider) homeViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.intro.IntroViewModel", ((Provider) introViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.auth.login.LoginModel", ((Provider) loginModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.home.page1.Page1ViewModel", ((Provider) page1ViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.home.page2.Page2ViewModel", ((Provider) page2ViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.home.page3.Page3ViewModel", ((Provider) page3ViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.auth.register.RegisterModel", ((Provider) registerModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.search.SearchViewModel", ((Provider) searchViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.splash.SplashViewModel", ((Provider) splashViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.yourcourses.YourCoursesViewModel", ((Provider) yourCoursesViewModelProvider)).build();
+      return ImmutableMap.<String, Provider<ViewModel>>builderWithExpectedSize(12).put("uz.gita.starterprojectmvi.presentation.screen.details.DetailsViewModel", ((Provider) detailsViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.home.HomeViewModel", ((Provider) homeViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.intro.IntroViewModel", ((Provider) introViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.auth.login.LoginModel", ((Provider) loginModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.home.page1.Page1ViewModel", ((Provider) page1ViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.home.page2.Page2ViewModel", ((Provider) page2ViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.home.page3.Page3ViewModel", ((Provider) page3ViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.payment.PaymentModel", ((Provider) paymentModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.auth.register.RegisterModel", ((Provider) registerModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.search.SearchViewModel", ((Provider) searchViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.splash.SplashViewModel", ((Provider) splashViewModelProvider)).put("uz.gita.starterprojectmvi.presentation.screen.yourcourses.YourCoursesViewModel", ((Provider) yourCoursesViewModelProvider)).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -615,16 +625,19 @@ public final class DaggerApp_HiltComponents_SingletonC {
           case 6: // uz.gita.starterprojectmvi.presentation.screen.home.page3.Page3ViewModel 
           return (T) new Page3ViewModel(singletonCImpl.provideSharedPrefProvider.get(), viewModelCImpl.useCaseImpl(), viewModelCImpl.page3DirectionImpl());
 
-          case 7: // uz.gita.starterprojectmvi.presentation.screen.auth.register.RegisterModel 
+          case 7: // uz.gita.starterprojectmvi.presentation.screen.payment.PaymentModel 
+          return (T) new PaymentModel(singletonCImpl.bindAppRepositoryProvider.get(), viewModelCImpl.paymentDirectionImpl());
+
+          case 8: // uz.gita.starterprojectmvi.presentation.screen.auth.register.RegisterModel 
           return (T) new RegisterModel(singletonCImpl.bindRepositoryProvider.get(), viewModelCImpl.registerDirectionImpl());
 
-          case 8: // uz.gita.starterprojectmvi.presentation.screen.search.SearchViewModel 
+          case 9: // uz.gita.starterprojectmvi.presentation.screen.search.SearchViewModel 
           return (T) new SearchViewModel(viewModelCImpl.searchDirectionsImpl(), viewModelCImpl.useCaseImpl());
 
-          case 9: // uz.gita.starterprojectmvi.presentation.screen.splash.SplashViewModel 
+          case 10: // uz.gita.starterprojectmvi.presentation.screen.splash.SplashViewModel 
           return (T) new SplashViewModel(singletonCImpl.provideSharedPrefProvider.get(), viewModelCImpl.splashDirections());
 
-          case 10: // uz.gita.starterprojectmvi.presentation.screen.yourcourses.YourCoursesViewModel 
+          case 11: // uz.gita.starterprojectmvi.presentation.screen.yourcourses.YourCoursesViewModel 
           return (T) new YourCoursesViewModel(viewModelCImpl.yourCoursesDirectionImpl(), singletonCImpl.bindAppRepositoryProvider.get());
 
           default: throw new AssertionError(id);

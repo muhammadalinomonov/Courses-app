@@ -81,7 +81,7 @@ class UseCaseImpl @Inject constructor(
         emit(Result.success(resultList))
     }.flowOn(Dispatchers.IO)
 
-    override fun addCourse(courseData: CourseData) = repository.addCourse(courseData)
+    override fun addCourse(courseData: CourseData) = repository.addCourse(courseData.toCourseEntity())
 
     override fun getAllCoursesFromRoom(): Flow<List<CourseEntity>> =
         repository.getAllCoursesFromRoom()

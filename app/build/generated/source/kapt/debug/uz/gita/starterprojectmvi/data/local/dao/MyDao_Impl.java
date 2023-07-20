@@ -31,7 +31,7 @@ public final class MyDao_Impl implements MyDao {
     this.__insertionAdapterOfCourseEntity = new EntityInsertionAdapter<CourseEntity>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `courses` (`id`,`name`,`title`,`description`,`imageUrl`,`duration`,`price`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `courses` (`id`,`name`,`title`,`description`,`imageUrl`,`duration`,`price`,`isPurchased`) VALUES (nullif(?, 0),?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -67,6 +67,8 @@ public final class MyDao_Impl implements MyDao {
         } else {
           stmt.bindString(7, value.getPrice());
         }
+        final int _tmp = value.isPurchased() ? 1 : 0;
+        stmt.bindLong(8, _tmp);
       }
     };
   }
@@ -85,7 +87,7 @@ public final class MyDao_Impl implements MyDao {
 
   @Override
   public Flow<List<CourseEntity>> getAllCourses() {
-    final String _sql = "SELECT * FROM courses";
+    final String _sql = "SELECT * FROM courses WHERE isPurchased = 1";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     return CoroutinesRoom.createFlow(__db, false, new String[]{"courses"}, new Callable<List<CourseEntity>>() {
       @Override
@@ -99,6 +101,7 @@ public final class MyDao_Impl implements MyDao {
           final int _cursorIndexOfImageUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "imageUrl");
           final int _cursorIndexOfDuration = CursorUtil.getColumnIndexOrThrow(_cursor, "duration");
           final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
+          final int _cursorIndexOfIsPurchased = CursorUtil.getColumnIndexOrThrow(_cursor, "isPurchased");
           final List<CourseEntity> _result = new ArrayList<CourseEntity>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final CourseEntity _item;
@@ -140,7 +143,89 @@ public final class MyDao_Impl implements MyDao {
             } else {
               _tmpPrice = _cursor.getString(_cursorIndexOfPrice);
             }
-            _item = new CourseEntity(_tmpId,_tmpName,_tmpTitle,_tmpDescription,_tmpImageUrl,_tmpDuration,_tmpPrice);
+            final boolean _tmpIsPurchased;
+            final int _tmp;
+            _tmp = _cursor.getInt(_cursorIndexOfIsPurchased);
+            _tmpIsPurchased = _tmp != 0;
+            _item = new CourseEntity(_tmpId,_tmpName,_tmpTitle,_tmpDescription,_tmpImageUrl,_tmpDuration,_tmpPrice,_tmpIsPurchased);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
+  }
+
+  @Override
+  public Flow<List<CourseEntity>> getNotPayedCourses() {
+    final String _sql = "SELECT * FROM courses WHERE isPurchased = 0";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    return CoroutinesRoom.createFlow(__db, false, new String[]{"courses"}, new Callable<List<CourseEntity>>() {
+      @Override
+      public List<CourseEntity> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+          final int _cursorIndexOfTitle = CursorUtil.getColumnIndexOrThrow(_cursor, "title");
+          final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
+          final int _cursorIndexOfImageUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "imageUrl");
+          final int _cursorIndexOfDuration = CursorUtil.getColumnIndexOrThrow(_cursor, "duration");
+          final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
+          final int _cursorIndexOfIsPurchased = CursorUtil.getColumnIndexOrThrow(_cursor, "isPurchased");
+          final List<CourseEntity> _result = new ArrayList<CourseEntity>(_cursor.getCount());
+          while(_cursor.moveToNext()) {
+            final CourseEntity _item;
+            final long _tmpId;
+            _tmpId = _cursor.getLong(_cursorIndexOfId);
+            final String _tmpName;
+            if (_cursor.isNull(_cursorIndexOfName)) {
+              _tmpName = null;
+            } else {
+              _tmpName = _cursor.getString(_cursorIndexOfName);
+            }
+            final String _tmpTitle;
+            if (_cursor.isNull(_cursorIndexOfTitle)) {
+              _tmpTitle = null;
+            } else {
+              _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
+            }
+            final String _tmpDescription;
+            if (_cursor.isNull(_cursorIndexOfDescription)) {
+              _tmpDescription = null;
+            } else {
+              _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
+            }
+            final String _tmpImageUrl;
+            if (_cursor.isNull(_cursorIndexOfImageUrl)) {
+              _tmpImageUrl = null;
+            } else {
+              _tmpImageUrl = _cursor.getString(_cursorIndexOfImageUrl);
+            }
+            final String _tmpDuration;
+            if (_cursor.isNull(_cursorIndexOfDuration)) {
+              _tmpDuration = null;
+            } else {
+              _tmpDuration = _cursor.getString(_cursorIndexOfDuration);
+            }
+            final String _tmpPrice;
+            if (_cursor.isNull(_cursorIndexOfPrice)) {
+              _tmpPrice = null;
+            } else {
+              _tmpPrice = _cursor.getString(_cursorIndexOfPrice);
+            }
+            final boolean _tmpIsPurchased;
+            final int _tmp;
+            _tmp = _cursor.getInt(_cursorIndexOfIsPurchased);
+            _tmpIsPurchased = _tmp != 0;
+            _item = new CourseEntity(_tmpId,_tmpName,_tmpTitle,_tmpDescription,_tmpImageUrl,_tmpDuration,_tmpPrice,_tmpIsPurchased);
             _result.add(_item);
           }
           return _result;

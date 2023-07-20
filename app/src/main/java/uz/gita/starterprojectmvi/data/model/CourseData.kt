@@ -11,12 +11,6 @@ data class CourseData(
     val duration: String,
     val price: String
 ) {
-    fun toCourseEntity() = CourseEntity(
-        name = name,
-        title = title,
-        description = description,
-        imageUrl = imageUrl,
-        duration = duration,
-        price = price
-    )
+    val idNum = "$name$id".hashCode().toLong()
+    fun toCourseEntity():CourseEntity = CourseEntity(id= idNum, name = name, title = title,description = description, imageUrl = imageUrl, duration = duration, price = price)
 }

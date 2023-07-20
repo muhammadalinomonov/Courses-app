@@ -30,6 +30,12 @@ class Page2ViewModel @Inject constructor(
                     direction.openYourScreen()
                 }
             }
+
+            Page2Contract.Intent.OpenPayments -> {
+                viewModelScope.launch {
+                    direction.openPayments()
+                }
+            }
         }
     }
 

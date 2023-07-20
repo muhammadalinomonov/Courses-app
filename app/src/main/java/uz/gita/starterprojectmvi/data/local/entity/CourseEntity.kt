@@ -13,8 +13,16 @@ data class CourseEntity(
     val description: String,
     val imageUrl: String,
     val duration: String,
-    val price: String
+    val price: String,
+    var isPurchased: Boolean = false
 ) {
-    fun entityToData() = CourseData(id, name, title, description, imageUrl, duration, price)
-
+    fun entityToData() = CourseData(
+        id = id,
+        name = name,
+        title = title,
+        description = description,
+        imageUrl = imageUrl,
+        duration = duration,
+        price = price
+    )
 }

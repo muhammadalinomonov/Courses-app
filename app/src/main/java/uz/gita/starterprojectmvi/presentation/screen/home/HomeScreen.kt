@@ -125,6 +125,7 @@ class HomeScreen : MyScreen() {
                     painter = tab.options.icon!!,
                     contentDescription = tab.options.title,
                     modifier = Modifier.size(50.dp),
+
                     tint = if (tabNavigator.current == tab) MyColor1 else Color.Black
                 )
             }

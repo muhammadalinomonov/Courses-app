@@ -18,6 +18,8 @@ import uz.gita.starterprojectmvi.presentation.screen.home.page2.Page2Direction
 import uz.gita.starterprojectmvi.presentation.screen.home.page2.Page2DirectionImpl
 import uz.gita.starterprojectmvi.presentation.screen.home.page3.Page3Direction
 import uz.gita.starterprojectmvi.presentation.screen.home.page3.Page3DirectionImpl
+import uz.gita.starterprojectmvi.presentation.screen.payment.PaymentContract
+import uz.gita.starterprojectmvi.presentation.screen.payment.PaymentDirectionImpl
 import uz.gita.starterprojectmvi.presentation.screen.search.SearchContract
 import uz.gita.starterprojectmvi.presentation.screen.search.SearchDirectionsImpl
 import uz.gita.starterprojectmvi.presentation.screen.yourcourses.YourCoursesDirection
@@ -54,5 +56,6 @@ interface DirectionModule {
     @Binds
     fun bindDetailsDirection(impl: DetailsDirections): DetailsContract.Directions
 
-
+    @Binds
+    fun bindPaymentDirection(impl: PaymentDirectionImpl): PaymentContract.PaymentDirection
 }

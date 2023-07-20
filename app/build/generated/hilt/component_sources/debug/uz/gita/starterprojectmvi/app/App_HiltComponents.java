@@ -62,6 +62,7 @@ import uz.gita.starterprojectmvi.presentation.screen.home.page1.Page1ViewModel_H
 import uz.gita.starterprojectmvi.presentation.screen.home.page2.Page2ViewModel_HiltModules;
 import uz.gita.starterprojectmvi.presentation.screen.home.page3.Page3ViewModel_HiltModules;
 import uz.gita.starterprojectmvi.presentation.screen.intro.IntroViewModel_HiltModules;
+import uz.gita.starterprojectmvi.presentation.screen.payment.PaymentModel_HiltModules;
 import uz.gita.starterprojectmvi.presentation.screen.search.SearchViewModel_HiltModules;
 import uz.gita.starterprojectmvi.presentation.screen.splash.SplashViewModel_HiltModules;
 import uz.gita.starterprojectmvi.presentation.screen.yourcourses.YourCoursesViewModel_HiltModules;
@@ -176,6 +177,7 @@ public final class App_HiltComponents {
           Page1ViewModel_HiltModules.KeyModule.class,
           Page2ViewModel_HiltModules.KeyModule.class,
           Page3ViewModel_HiltModules.KeyModule.class,
+          PaymentModel_HiltModules.KeyModule.class,
           RegisterModel_HiltModules.KeyModule.class,
           SearchViewModel_HiltModules.KeyModule.class,
           SplashViewModel_HiltModules.KeyModule.class,
@@ -226,6 +228,7 @@ public final class App_HiltComponents {
           Page1ViewModel_HiltModules.BindsModule.class,
           Page2ViewModel_HiltModules.BindsModule.class,
           Page3ViewModel_HiltModules.BindsModule.class,
+          PaymentModel_HiltModules.BindsModule.class,
           RegisterModel_HiltModules.BindsModule.class,
           SearchViewModel_HiltModules.BindsModule.class,
           SplashViewModel_HiltModules.BindsModule.class,

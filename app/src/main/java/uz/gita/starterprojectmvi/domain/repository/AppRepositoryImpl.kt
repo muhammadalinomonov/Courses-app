@@ -63,8 +63,8 @@ class AppRepositoryImpl @Inject constructor(private val dao: MyDao) : AppReposit
         }
     }
 
-    override fun addCourse(courseData: CourseData) {
-        dao.addCourse(courseData.toCourseEntity())
+    override fun addCourse(courseEntity: CourseEntity) {
+        dao.addCourse(courseEntity)
     }
 
     override fun getAllCoursesFromRoom(): Flow<List<CourseEntity>> {
@@ -74,6 +74,9 @@ class AppRepositoryImpl @Inject constructor(private val dao: MyDao) : AppReposit
     override suspend fun getMyCourses(): Flow<List<CourseEntity>> = dao.getAllCourses()
 
 
+    override fun getNotPurchasedCourse(): Flow<List<CourseEntity>> {
+        return dao.getNotPayedCourses()
+    }
     /*override suspend fun getMyCourses(): Flow<Result<List<CourseData>>> = callbackFlow {
         val scope = CoroutineScope(Dispatchers.IO + SupervisorJob())
         dao.getAllCourses().onEach { list ->
